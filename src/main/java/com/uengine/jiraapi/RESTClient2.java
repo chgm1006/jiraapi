@@ -4,34 +4,18 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientHandlerException;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.core.util.Base64;
+import com.uengine.jiraapi.rest.RESTOfIssue;
+import net.sf.json.JSONObject;
+import net.sf.json.JSONSerializer;
 
 import javax.naming.AuthenticationException;
 
-/**
- * Created by Administrator on 2015-05-06.
- */
 public class RESTClient2 {
-
-    static String auth = new String(Base64.encode("admin:promin1006"));
-    static String url = "https://guruforrest.atlassian.net/rest/api/2/issue";
-    static String data =
-            "{\"fields\"" +
-            ":{\"project\"" +
-            ":{\"key\":\"JIRAAPI\"}," +
-            "\"summary\":\"REST Test \",\"issuetype\":{\"name\":\"Task\"}}}";
-
-    static String url1 = "https://guruforrest.atlassian.net/rest/api/2/issue/JIRAAPI-1";
-    static String url2 = "https://guruforrest.atlassian.net/rest/api/2/issue/JIRAAPI-1";
-    static String data1 = "{\"fields\":{\"assignee\":{\"name\":\"vinodh\"}}}";
-
-    static String url3 = "https://guruforrest.atlassian.net/rest/api/2/issue/JIRAAPI-1";
 
     private static String invokePostMethod(String auth, String url, String data) throws AuthenticationException, ClientHandlerException {
         Client client = Client.create();
         WebResource webResource = client.resource(url);
         ClientResponse response = webResource.header("Authorization", "Basic " + auth).type("application/json").accept("application/json").post(ClientResponse.class, data);
-        System.out.println(auth);
         int statusCode = response.getStatus();
         if (statusCode == 401) {
             throw new AuthenticationException("Invalid Username or Password");
@@ -75,31 +59,37 @@ public class RESTClient2 {
     }
 
     public static void main(String[] args) throws AuthenticationException, ClientHandlerException {
+        RESTOfIssue issue = new RESTOfIssue();
         /*
-        * 1. 이슈 생성
+        * 1. 이슈 생성 :: 프로젝트 이슈를 open
         * */
-        System.out.println(invokePostMethod(auth, url, data));
+        System.out.println("1. 이슈 생성");
+//        System.out.println(invokePostMethod(auth, url, data));
+        System.out.println(issue.getData());
 
         /*
         * 2. 이슈 정보
         * */
-//        String resp = invokeGetMethod(auth, url1);
-//        JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON(resp);
-//        JSONObject sum = jsonObject.getJSONObject("fields");
-//        System.out.println(sum.getString("summary"));
+        System.out.println("2. 이슈 정보");
+        String resp = invokeGetMethod(issue.getAuth(), issue.getUrl1());
+        JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON(resp);
+        JSONObject sum = jsonObject.getJSONObject("fields");
+        System.out.println(sum.getString("created"));
+        System.out.println("sum :: " + sum);
 
         /*
         * 3. 이슈 업데이트
         * */
-//        System.out.println(invodePutMethod(auth, url2, data1));
+        System.out.println("3. 이슈 업데이트");
+        System.out.println(invodePutMethod(issue.getAuth(), issue.getUrl2(), issue.getData1()));
 
         /*
         * 4. 이슈 삭제
         * */
-//        System.out.println(invodeDeleteMethod(auth, url3));
+        System.out.println("4. 이슈 삭제");
+//        System.out.println(invodeDeleteMethod(issue.getAuth(), issue.getUrl3()));
 
     }
-
 
 
 }
