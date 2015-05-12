@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/jiraapi.iml" filepath="$PROJECT_DIR$/.idea/jiraapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jiraapi.iml" filepath="$PROJECT_DIR$/jiraapi.iml" />
     </modules>
   </component>
 </project>

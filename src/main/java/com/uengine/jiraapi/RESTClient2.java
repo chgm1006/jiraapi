@@ -1,6 +1,10 @@
 package com.uengine.jiraapi;
 
 import com.sun.jersey.api.client.ClientHandlerException;
+import com.uengine.jiraapi.issue.Create;
+import com.uengine.jiraapi.issue.Delete;
+import com.uengine.jiraapi.issue.Retrieve;
+import com.uengine.jiraapi.issue.Update;
 import com.uengine.jiraapi.rest.RESTOfIssue;
 import net.sf.json.JSONObject;
 import net.sf.json.JSONSerializer;
@@ -11,20 +15,20 @@ public class RESTClient2 {
 
 
     public static void main(String[] args) throws AuthenticationException, ClientHandlerException {
-        RESTOfIssue rs = new RESTOfIssue();
 
-        /*
-        * 1. 이슈 생성 :: 프로젝트 이슈를 open
-        * */
-        System.out.println("1. 이슈 생성");
-//        System.out.println(invokePostMethod(auth, url, data));
-        System.out.println(rs.getData());
+        Retrieve retrieve = new Retrieve();
+        Update update = new Update();
+        Delete delete = new Delete();
+
+
+
+
 
         /*
         * 2. 이슈 정보
         * */
         System.out.println("2. 이슈 정보");
-        String resp = invokeGetMethod(rs.getAuth(), rs.getUrl1());
+        String resp = retrieve.invokeGetMethod(rs.getAuth(), rs.getUrl1());
         JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON(resp);
         JSONObject sum = jsonObject.getJSONObject("fields");
         System.out.println(sum.getString("created"));
@@ -34,13 +38,13 @@ public class RESTClient2 {
         * 3. 이슈 업데이트
         * */
         System.out.println("3. 이슈 업데이트");
-        System.out.println(invodePutMethod(rs.getAuth(), rs.getUrl2(), rs.getData1()));
+        System.out.println(update.invodePutMethod(rs.getAuth(), rs.getUrl2(), rs.getData1()));
 
         /*
         * 4. 이슈 삭제
         * */
         System.out.println("4. 이슈 삭제");
-//        System.out.println(invodeDeleteMethod(issue.getAuth(), issue.getUrl3()));
+        System.out.println(delete.invodeDeleteMethod(rs.getAuth(), rs.getUrl3()));
 
     }
 

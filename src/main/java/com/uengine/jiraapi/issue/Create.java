@@ -12,7 +12,7 @@ import javax.naming.AuthenticationException;
  */
 public class Create {
 
-    public   String invokePostMethod(String auth, String url, String data) throws AuthenticationException, ClientHandlerException {
+    public String invokePostMethod(String auth, String url, String data) throws AuthenticationException, ClientHandlerException {
         Client client = Client.create();
         WebResource webResource = client.resource(url);
         ClientResponse response = webResource.header("Authorization", "Basic " + auth).type("application/json").accept("application/json").post(ClientResponse.class, data);
