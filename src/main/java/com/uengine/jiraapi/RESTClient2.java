@@ -23,11 +23,6 @@ public class RESTClient2 {
 
 
 
-        /*
-        * 3. 이슈 업데이트
-        * */
-        System.out.println("3. 이슈 업데이트");
-//        System.out.println(update.invodePutMethod(rs.getAuth(), rs.getUrl(), rs.getData()));
 
         /*
         * 4. 이슈 삭제

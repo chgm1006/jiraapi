@@ -21,10 +21,14 @@ public class RetrieveTest {
         rs.setAuth("admin:promin1006");
         rs.setUrl("guruforrest.atlassian.net", "CREAT-5");
         System.out.println(rs.getUrl());
+
         String resp = retrieve.invokeGetMethod(rs.getAuth(), rs.getUrl());
+        System.out.println(resp);
+
         JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON(resp);
         JSONObject sum = jsonObject.getJSONObject("fields");
-        System.out.println(sum.getString("created"));
+//        String  sum = (String) jsonObject.getString("comment");
+        System.out.println(sum.get("comment"));
         System.out.println("sum :: " + sum);
     }
 }

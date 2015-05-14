@@ -7,12 +7,12 @@ import com.uengine.jiraapi.Exception.ValidateCheck;
  * Created by Forrest G. Choi on 2015-05-07.
  */
 public class RESTOfIssue {
-    private static final String REST_URL = "/rest/api/2/issue";
     ValidateCheck validateCheck = new ValidateCheck();
+    private static final String REST_URL = "/rest/api/2/issue";
+
     private String auth = null;
     private String url = null;
     private String data = null;
-    private String data1 = "{\"fields\":{\"assignee\":{\"name\":\"vinodh\"}}}";
 
     public RESTOfIssue(String auth) {
         this.auth = auth;

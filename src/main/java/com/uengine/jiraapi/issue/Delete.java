@@ -20,7 +20,7 @@ public class Delete {
         if (statusCode == 401) {
             throw new AuthenticationException("Invalid Username or Password");
         }
-        return "successfully deleted";
+        return "이슈를 삭제하였습니다.";
     }
 
 }

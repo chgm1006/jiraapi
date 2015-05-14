@@ -5,19 +5,36 @@ package com.uengine.jiraapi.Exception;
  */
 public class ValidateCheck {
     public void nullCheckValue(String auth, String url, String data) {
-        if (auth == null || "".equals(auth)) {
+        if (!nullCheckAuth(auth)) {
             throw new NullPointerException(getNullMessage("auth"));
         }
-        if (url == null || "".equals(url)) {
+        if (!nullCheckURL(url)) {
             throw new NullPointerException(getNullMessage("url"));
         }
-        if (data == null || "".equals(data)) {
+        if (!nullCheckData(data)) {
             throw new NullPointerException(getNullMessage("data"));
+        }
+    }
+
+
+    public void nullCheckValue(String auth, String url) {
+        if (!nullCheckAuth(auth)) {
+            throw new NullPointerException(getNullMessage("auth"));
+        }
+        if (!nullCheckURL(url)) {
+            throw new NullPointerException(getNullMessage("url"));
         }
     }
 
     public boolean nullCheckURL(String url) {
         if (url == null || "".equals(url)) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean nullCheckAuth(String auth) {
+        if (auth == null || "".equals(auth)) {
             return false;
         }
         return true;

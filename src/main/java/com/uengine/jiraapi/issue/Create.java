@@ -12,9 +12,10 @@ import javax.naming.AuthenticationException;
  * Created by Forrest G. Choi on 2015-05-11.
  */
 public class Create {
+    ValidateCheck validateCheck = new ValidateCheck();
 
     public String invokePostMethod(String auth, String url, String data) throws AuthenticationException, ClientHandlerException {
-        new ValidateCheck().nullCheckValue(auth, url, data);
+        validateCheck.nullCheckValue(auth, url, data);
 
         Client client = Client.create();
         WebResource webResource = client.resource(url);
@@ -23,6 +24,6 @@ public class Create {
         if (statusCode == 401) {
             throw new AuthenticationException("Username과 Password가 잘못되었습니다.");
         }
-        return "issue successfully created";
+        return "이슈가 생성되었습니다.";
     }
 }
