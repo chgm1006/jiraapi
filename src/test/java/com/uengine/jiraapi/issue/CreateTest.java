@@ -24,7 +24,7 @@ public class CreateTest {
 
 
         rs.setAuth("admin:promin1006");
-        rs.setUrl("guruforrest.atlassian.net");
+        rs.setIssueUrl("guruforrest.atlassian.net");
         rs.setData(data);
         System.out.println(rs.getUrl());
 

@@ -17,7 +17,7 @@ public class DeleteTest {
         Delete delete = new Delete();
 
         rs.setAuth("admin:promin1006");
-        rs.setUrl("guruforrest.atlassian.net", "CREAT-7?deleteSubtasks=true");
+        rs.setIssueUrl("guruforrest.atlassian.net", "CREAT-8?deleteSubtasks=true");
 
         System.out.println(rs.getUrl());
         System.out.println(delete.invodeDelete(rs.getAuth(), rs.getUrl()));

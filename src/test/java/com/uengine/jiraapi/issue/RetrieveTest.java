@@ -19,16 +19,13 @@ public class RetrieveTest {
         Retrieve retrieve = new Retrieve();
 
         rs.setAuth("admin:promin1006");
-        rs.setUrl("guruforrest.atlassian.net", "CREAT-8");
-        System.out.println(rs.getUrl());
+        rs.setIssueUrl("guruforrest.atlassian.net", "CREAT-5");
 
         String resp = retrieve.invokeGet(rs.getAuth(), rs.getUrl());
-        System.out.println(resp);
 
         JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON(resp);
         JSONObject sum = jsonObject.getJSONObject("fields");
-//        String  sum = (String) jsonObject.getString("comment");
-        System.out.println(sum.get("comment"));
+//        System.out.println(sum.get("body"));
         System.out.println("sum :: " + sum);
     }
 }

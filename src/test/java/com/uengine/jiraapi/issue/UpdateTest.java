@@ -18,7 +18,7 @@ public class UpdateTest {
         String data = "{\"fields\":{\"assignee\":{\"name\":\"vinodh\"}}}";
 
         rs.setAuth("admin:promin1006");
-        rs.setUrl("guruforrest.atlassian.net", "CREAT-5");
+        rs.setIssueUrl("guruforrest.atlassian.net", "CREAT-5");
         rs.setData(data);
         System.out.println(update.invodePut(rs.getAuth(), rs.getUrl(), rs.getData()));
 

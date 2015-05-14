@@ -25,7 +25,7 @@
   "resolution": null,
   "resolutiondate": null,
   "workratio": -1,
-  "lastViewed": "2015-05-13T17:12:17.217+0900",
+  "lastViewed": "2015-05-14T15:36:34.748+0900",
   "watches": {
     "self": "https://guruforrest.atlassian.net/rest/api/2/issue/CREAT-5/watchers",
     "watchCount": 1,
@@ -55,7 +55,7 @@
   "versions": [],
   "issuelinks": [],
   "assignee": null,
-  "updated": "2015-05-13T13:01:04.380+0900",
+  "updated": "2015-05-14T15:16:03.164+0900",
   "status": {
     "self": "https://guruforrest.atlassian.net/rest/api/2/status/10000",
     "description": "",
@@ -129,9 +129,84 @@
   },
   "comment": {
     "startAt": 0,
-    "maxResults": 0,
-    "total": 0,
-    "comments": []
+    "maxResults": 2,
+    "total": 2,
+    "comments": [
+      {
+        "self": "https://guruforrest.atlassian.net/rest/api/2/issue/10102/comment/10000",
+        "id": "10000",
+        "author": {
+          "self": "https://guruforrest.atlassian.net/rest/api/2/user?username=admin",
+          "name": "admin",
+          "key": "admin",
+          "emailAddress": "chgm1006@gmail.com",
+          "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+            "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+            "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+            "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+          },
+          "displayName": "gyeongmin choi [Administrator]",
+          "active": true,
+          "timeZone": "Asia/Tokyo"
+        },
+        "body": "테스트 입니다.",
+        "updateAuthor": {
+          "self": "https://guruforrest.atlassian.net/rest/api/2/user?username=admin",
+          "name": "admin",
+          "key": "admin",
+          "emailAddress": "chgm1006@gmail.com",
+          "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+            "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+            "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+            "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+          },
+          "displayName": "gyeongmin choi [Administrator]",
+          "active": true,
+          "timeZone": "Asia/Tokyo"
+        },
+        "created": "2015-05-13T18:26:29.694+0900",
+        "updated": "2015-05-13T18:26:29.694+0900"
+      },
+      {
+        "self": "https://guruforrest.atlassian.net/rest/api/2/issue/10102/comment/10001",
+        "id": "10001",
+        "author": {
+          "self": "https://guruforrest.atlassian.net/rest/api/2/user?username=admin",
+          "name": "admin",
+          "key": "admin",
+          "emailAddress": "chgm1006@gmail.com",
+          "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+            "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+            "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+            "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+          },
+          "displayName": "gyeongmin choi [Administrator]",
+          "active": true,
+          "timeZone": "Asia/Tokyo"
+        },
+        "body": "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+        "updateAuthor": {
+          "self": "https://guruforrest.atlassian.net/rest/api/2/user?username=admin",
+          "name": "admin",
+          "key": "admin",
+          "emailAddress": "chgm1006@gmail.com",
+          "avatarUrls": {
+            "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+            "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+            "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+            "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+          },
+          "displayName": "gyeongmin choi [Administrator]",
+          "active": true,
+          "timeZone": "Asia/Tokyo"
+        },
+        "created": "2015-05-14T15:16:03.164+0900",
+        "updated": "2015-05-14T15:16:03.164+0900"
+      }
+    ]
   },
   "votes": {
     "self": "https://guruforrest.atlassian.net/rest/api/2/issue/CREAT-5/votes",

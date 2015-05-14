@@ -9,13 +9,14 @@ import com.uengine.jiraapi.Exception.ValidateCheck;
 public class RESTOfIssue {
     ValidateCheck validateCheck = new ValidateCheck();
     private static final String REST_URL = "/rest/api/2/issue";
+    private static final String REST_PROJECT_URL = "/rest/api/2/project";
 
     private String auth = null;
     private String url = null;
     private String data = null;
 
     public RESTOfIssue(String auth) {
-        this.auth = auth;
+        this.auth = new String(Base64.encode(auth.toLowerCase()));
     }
 
     public RESTOfIssue() {
@@ -34,14 +35,14 @@ public class RESTOfIssue {
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setIssueUrl(String url) {
         if (!validateCheck.checkNullURL(url)) {
             throw new NullPointerException(validateCheck.getNullMessage("url"));
         }
         this.url = "https://" + url + REST_URL;
     }
 
-    public void setUrl(String url, String key) {
+    public void setIssueUrl(String url, String key) {
         if (!validateCheck.checkNullURL(url)) {
             throw new NullPointerException(validateCheck.getNullMessage("url"));
         }
@@ -51,6 +52,14 @@ public class RESTOfIssue {
 
         this.url = "https://" + url + REST_URL + "/" + key;
 
+    }
+
+    public void setProjectUrl(String url) {
+        if (!validateCheck.checkNullURL(url)) {
+            throw new NullPointerException(url);
+        }
+
+        this.url = "https://" + url + REST_PROJECT_URL;
     }
 
     public String getData() {
