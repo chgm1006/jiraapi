@@ -14,15 +14,15 @@ public class RetrieveTest {
     * 2. 이슈 정보 : 이슈 정보를 가져옴.
     * */
     @Test
-    public void testInvokeGetMethod() throws Exception {
+    public void testInvokeGet() throws Exception {
         RESTOfIssue rs = new RESTOfIssue();
         Retrieve retrieve = new Retrieve();
 
         rs.setAuth("admin:promin1006");
-        rs.setUrl("guruforrest.atlassian.net", "CREAT-5");
+        rs.setUrl("guruforrest.atlassian.net", "CREAT-8");
         System.out.println(rs.getUrl());
 
-        String resp = retrieve.invokeGetMethod(rs.getAuth(), rs.getUrl());
+        String resp = retrieve.invokeGet(rs.getAuth(), rs.getUrl());
         System.out.println(resp);
 
         JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON(resp);

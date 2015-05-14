@@ -35,17 +35,17 @@ public class RESTOfIssue {
     }
 
     public void setUrl(String url) {
-        if (!validateCheck.nullCheckURL(url)) {
+        if (!validateCheck.checkNullURL(url)) {
             throw new NullPointerException(validateCheck.getNullMessage("url"));
         }
         this.url = "https://" + url + REST_URL;
     }
 
     public void setUrl(String url, String key) {
-        if (!validateCheck.nullCheckURL(url)) {
+        if (!validateCheck.checkNullURL(url)) {
             throw new NullPointerException(validateCheck.getNullMessage("url"));
         }
-        if (!validateCheck.nullCheckKey(key)) {
+        if (!validateCheck.checkNullKey(key)) {
             throw new NullPointerException(validateCheck.getNullMessage("key"));
         }
 

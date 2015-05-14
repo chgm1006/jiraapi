@@ -12,10 +12,13 @@ import javax.naming.AuthenticationException;
  * Created by Forrest G. Choi on 2015-05-11.
  */
 public class Create {
+    /**
+     *
+     */
     ValidateCheck validateCheck = new ValidateCheck();
 
-    public String invokePostMethod(String auth, String url, String data) throws AuthenticationException, ClientHandlerException {
-        validateCheck.nullCheckValue(auth, url, data);
+    public String invokePost(String auth, String url, String data) throws AuthenticationException, ClientHandlerException {
+        validateCheck.checkNullValue(auth, url, data);
 
         Client client = Client.create();
         WebResource webResource = client.resource(url);

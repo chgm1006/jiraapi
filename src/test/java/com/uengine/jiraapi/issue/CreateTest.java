@@ -12,7 +12,7 @@ public class CreateTest {
     * 1. 이슈 생성 :: 프로젝트 이슈를 open
     * */
     @Test
-    public void testInvokePostMethod() {
+    public void testInvokePost() {
         RESTOfIssue rs = new RESTOfIssue();
         Create create = new Create();
 
@@ -29,7 +29,7 @@ public class CreateTest {
         System.out.println(rs.getUrl());
 
         try {
-            System.out.println(create.invokePostMethod(rs.getAuth(), rs.getUrl(), rs.getData()));
+            System.out.println(create.invokePost(rs.getAuth(), rs.getUrl(), rs.getData()));
             System.out.println(rs.getData());
         } catch (AuthenticationException e) {
             e.printStackTrace();

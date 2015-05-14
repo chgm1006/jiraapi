@@ -1,60 +1,104 @@
 package com.uengine.jiraapi.Exception;
 
 /**
- * Created by Forrest G. Choi on 2015-05-13.
+ * 예외 처리 클래스
  */
 public class ValidateCheck {
-    public void nullCheckValue(String auth, String url, String data) {
-        if (!nullCheckAuth(auth)) {
+    /**
+     * 인증값, URL, data가 NULL인지 체크한다.
+     *
+     * @param auth 인증값. ex) admin:1234 (username:password)
+     * @param url  JIRA 서버 URL
+     * @param data JSON 형태의 데이터
+     */
+    public void checkNullValue(String auth, String url, String data) {
+        if (!checkNullAuth(auth)) {
             throw new NullPointerException(getNullMessage("auth"));
         }
-        if (!nullCheckURL(url)) {
+        if (!checkNullURL(url)) {
             throw new NullPointerException(getNullMessage("url"));
         }
-        if (!nullCheckData(data)) {
+        if (!checkNullData(data)) {
             throw new NullPointerException(getNullMessage("data"));
         }
     }
 
 
-    public void nullCheckValue(String auth, String url) {
-        if (!nullCheckAuth(auth)) {
+    /**
+     * 인증값, URL, data가 NULL인지 체크한다.
+     *
+     * @param auth 인증값. ex) admin:1234 (username:password)
+     * @param url  JIRA 서버 URL
+     */
+    public void checkNullValue(String auth, String url) {
+        if (!checkNullAuth(auth)) {
             throw new NullPointerException(getNullMessage("auth"));
         }
-        if (!nullCheckURL(url)) {
+        if (!checkNullURL(url)) {
             throw new NullPointerException(getNullMessage("url"));
         }
     }
 
-    public boolean nullCheckURL(String url) {
+    /**
+     * URL이 NULL인지 체크한다.
+     *
+     * @param url JIRA 서버 URL
+     * @return url값이 null이면 false를 반환
+     */
+    public boolean checkNullURL(String url) {
         if (url == null || "".equals(url)) {
             return false;
         }
         return true;
     }
 
-    public boolean nullCheckAuth(String auth) {
+    /**
+     * auth 값이 NULL인지 체크한다.
+     *
+     * @param auth 인증값. ex) admin:1234 (username:password)
+     * @return auth값이 null이면 false를 반환
+     */
+    public boolean checkNullAuth(String auth) {
         if (auth == null || "".equals(auth)) {
             return false;
         }
         return true;
     }
 
-    public boolean nullCheckKey(String key) {
+    /**
+     * key 값이 null인지 체크한다.
+     *
+     * @param key IssueID나 key. ex) JIRA-1
+     * @return key값이 null이면 false를 반환
+     */
+    public boolean checkNullKey(String key) {
         if (key == null || "".equals(key)) {
             return false;
         }
         return true;
     }
 
-    public boolean nullCheckData(String data) {
+    /**
+     * data 값이 null인지 체크한다.
+     *
+     * @param data JSON 형태의 data 필드
+     * @return data 값이 null이면 false반환
+     */
+    public boolean checkNullData(String data) {
         if (data == null || "".equals(data)) {
             return false;
         }
         return true;
     }
 
-    public String getNullMessage(String msg) {
-        return msg.toUpperCase() + "값이 NULL입니다.";
+    /**
+     * 파라미터가 null인 경우 메세지를 리턴한다.
+     * checkVar가 null인지 아닌지는 검증하지 않는다.
+     *
+     * @param checkVar
+     * @return checkVar가 null이라는 메세지를 출력.
+     */
+    public String getNullMessage(String checkVar) {
+        return checkVar.toUpperCase() + "값이 NULL입니다.";
     }
 }

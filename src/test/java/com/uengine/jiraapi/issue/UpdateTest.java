@@ -12,7 +12,7 @@ public class UpdateTest {
     * 3. 이슈 업데이트
     * */
     @Test
-    public void testInvodePutMethod() throws Exception {
+    public void testInvodePut() throws Exception {
         RESTOfIssue rs = new RESTOfIssue();
         Update update = new Update();
         String data = "{\"fields\":{\"assignee\":{\"name\":\"vinodh\"}}}";
@@ -20,7 +20,7 @@ public class UpdateTest {
         rs.setAuth("admin:promin1006");
         rs.setUrl("guruforrest.atlassian.net", "CREAT-5");
         rs.setData(data);
-        System.out.println(update.invodePutMethod(rs.getAuth(), rs.getUrl(), rs.getData()));
+        System.out.println(update.invodePut(rs.getAuth(), rs.getUrl(), rs.getData()));
 
     }
 }

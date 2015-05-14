@@ -9,13 +9,21 @@ import com.uengine.jiraapi.Exception.ValidateCheck;
 import javax.naming.AuthenticationException;
 
 /**
- * Created by Forrest G. Choi on 2015-05-11.
+ *  이슈 정보를 가져온다.
  */
 public class Retrieve {
-    ValidateCheck validateCheck = new ValidateCheck();
+    private ValidateCheck validateCheck = new ValidateCheck();
 
-    public String invokeGetMethod(String auth, String url) throws AuthenticationException, ClientHandlerException {
-        validateCheck.nullCheckValue(auth, url);
+    /**
+     * 이슈 정보를 가져온다.
+     * @param auth  JIRA 인증정보.ex) admin:1234
+     * @param url   REST URL
+     * @return      이슈정보를 JSON 형태로 반환한다.
+     * @throws AuthenticationException
+     * @throws ClientHandlerException
+     */
+    public String invokeGet(String auth, String url) throws AuthenticationException, ClientHandlerException {
+        validateCheck.checkNullValue(auth, url);
 
         Client client = Client.create();
         WebResource webResource = client.resource(url);
