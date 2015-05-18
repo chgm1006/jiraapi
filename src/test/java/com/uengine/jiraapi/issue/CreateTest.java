@@ -27,6 +27,7 @@ public class CreateTest {
         rs.setIssueUrl("guruforrest.atlassian.net");
         rs.setData(data);
         System.out.println(rs.getUrl());
+        System.out.println(data);
 
         try {
             System.out.println(create.invokePost(rs.getAuth(), rs.getUrl(), rs.getData()));

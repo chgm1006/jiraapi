@@ -7,10 +7,9 @@ import com.uengine.jiraapi.Exception.ValidateCheck;
  * Created by Forrest G. Choi on 2015-05-07.
  */
 public class RESTOfIssue {
-    ValidateCheck validateCheck = new ValidateCheck();
-    private static final String REST_URL = "/rest/api/2/issue";
+    private static final String REST_ISSUE_URL = "/rest/api/2/issue";
     private static final String REST_PROJECT_URL = "/rest/api/2/project";
-
+    private ValidateCheck validateCheck = new ValidateCheck();
     private String auth = null;
     private String url = null;
     private String data = null;
@@ -39,7 +38,7 @@ public class RESTOfIssue {
         if (!validateCheck.checkNullURL(url)) {
             throw new NullPointerException(validateCheck.getNullMessage("url"));
         }
-        this.url = "https://" + url + REST_URL;
+        this.url = "https://" + url + REST_ISSUE_URL;
     }
 
     public void setIssueUrl(String url, String key) {
@@ -50,7 +49,19 @@ public class RESTOfIssue {
             throw new NullPointerException(validateCheck.getNullMessage("key"));
         }
 
-        this.url = "https://" + url + REST_URL + "/" + key;
+        this.url = "https://" + url + REST_ISSUE_URL + "/" + key;
+
+    }
+
+    public void setCommentUrl(String url, String key) {
+        if (!validateCheck.checkNullURL(url)) {
+            throw new NullPointerException(validateCheck.getNullMessage("url"));
+        }
+        if (!validateCheck.checkNullKey(key)) {
+            throw new NullPointerException(validateCheck.getNullMessage("key"));
+        }
+
+        this.url = "https://" + url + REST_ISSUE_URL + "/" + key + "/comment";
 
     }
 

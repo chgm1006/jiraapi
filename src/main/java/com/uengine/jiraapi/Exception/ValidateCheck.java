@@ -1,5 +1,7 @@
 package com.uengine.jiraapi.Exception;
 
+import javax.naming.AuthenticationException;
+
 /**
  * 예외 처리 클래스
  */
@@ -100,5 +102,17 @@ public class ValidateCheck {
      */
     public String getNullMessage(String checkVar) {
         return checkVar.toUpperCase() + "값이 NULL입니다.";
+    }
+
+    /**
+     * status 코드의 예외 메세지를 반환한다.
+     *
+     * @param status status 코드
+     * @throws AuthenticationException
+     */
+    public void getStatusException(int status) throws AuthenticationException {
+        if (status == 401) {
+            throw new AuthenticationException("Username과 Password가 잘못되었습니다.");
+        }
     }
 }
