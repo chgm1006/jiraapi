@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64ce6ee4-7b80-4a20-9034-9ba871a11ab7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/Project.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java" />
-      <change type="DELETED" beforePath="D:\Projects\02. intelliJ\jiraapi\src\main\java\com\uengine\jiraapi\project\JIRAProject.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Projects\02. intelliJ\jiraapi\src\test\java\com\uengine\jiraapi\project\JIRAProjectTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/CreateTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/CreateTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/Project.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/Project.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Retrieve.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Retrieve.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/Exception/ValidateCheck.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/Exception/ValidateCheck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.json" afterPath="$PROJECT_DIR$/test.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jiraapi.iws" />
@@ -35,33 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProjectTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java">
+      <file leaf-file-name="DeleteTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/DeleteTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Project.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/Project.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5339806">
-              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValidateCheck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/Exception/ValidateCheck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="109" column="30" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.6440129">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,11 +55,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Retrieve.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2153#2161#0" expanded="true" />
-                <element signature="e#2731#2739#0" expanded="true" />
+                <element signature="e#2122#2130#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,8 +90,18 @@
       <file leaf-file-name="test.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-13.4838705">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidateCheck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/Exception/ValidateCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="109" column="30" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -163,12 +144,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/Exception/ValidateCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/JIRAProject.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/JIRAProjectTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectInfoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/ProjectInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Retrieve.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java" />
         <option value="$PROJECT_DIR$/test.json" />
-        <option value="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectInfoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/ProjectInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/Project.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java" />
       </list>
     </option>
   </component>
@@ -464,118 +446,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.uengine.jiraapi.issue" />
       <recent name="com.uengine.jiraapi.project" />
+      <recent name="com.uengine.jiraapi.issue" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProjectTest.testGetProjectInfo">
-    <configuration default="false" name="RetrieveTest.testGetAllInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.uengine.jiraapi.issue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jiraapi" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.uengine.jiraapi.issue" />
-      <option name="MAIN_CLASS_NAME" value="com.uengine.jiraapi.issue.RetrieveTest" />
-      <option name="METHOD_NAME" value="testGetAllInfo" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="RetrieveTest.testGetComment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.uengine.jiraapi.issue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jiraapi" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.uengine.jiraapi.issue" />
-      <option name="MAIN_CLASS_NAME" value="com.uengine.jiraapi.issue.RetrieveTest" />
-      <option name="METHOD_NAME" value="testGetComment" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="RetrieveTest.testGetIssueIDs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.uengine.jiraapi.issue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jiraapi" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.uengine.jiraapi.issue" />
-      <option name="MAIN_CLASS_NAME" value="com.uengine.jiraapi.issue.RetrieveTest" />
-      <option name="METHOD_NAME" value="testGetIssueIDs" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="RetrieveTest.testGetProjectKeys" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.uengine.jiraapi.issue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="jiraapi" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.uengine.jiraapi.issue" />
-      <option name="MAIN_CLASS_NAME" value="com.uengine.jiraapi.issue.RetrieveTest" />
-      <option name="METHOD_NAME" value="testGetProjectKeys" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ProjectTest">
     <configuration default="false" name="ProjectTest.testGetProjectInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -590,6 +468,110 @@
       <option name="MAIN_CLASS_NAME" value="com.uengine.jiraapi.project.ProjectTest" />
       <option name="METHOD_NAME" value="testGetProjectInfo" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProjectTest.testGetAllProjectInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.uengine.jiraapi.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jiraapi" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.uengine.jiraapi.project" />
+      <option name="MAIN_CLASS_NAME" value="com.uengine.jiraapi.project.ProjectTest" />
+      <option name="METHOD_NAME" value="testGetAllProjectInfo" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProjectTest.testGetProjectKeys" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.uengine.jiraapi.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jiraapi" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.uengine.jiraapi.project" />
+      <option name="MAIN_CLASS_NAME" value="com.uengine.jiraapi.project.ProjectTest" />
+      <option name="METHOD_NAME" value="testGetProjectKeys" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProjectTest.testGetProjectNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.uengine.jiraapi.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jiraapi" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.uengine.jiraapi.project" />
+      <option name="MAIN_CLASS_NAME" value="com.uengine.jiraapi.project.ProjectTest" />
+      <option name="METHOD_NAME" value="testGetProjectNames" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.uengine.jiraapi.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="jiraapi" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.uengine.jiraapi.project" />
+      <option name="MAIN_CLASS_NAME" value="com.uengine.jiraapi.project.ProjectTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -900,19 +882,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.RetrieveTest.testGetAllInfo" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.RetrieveTest.testGetComment" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RetrieveTest.testGetIssueIDs" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RetrieveTest.testGetProjectKeys" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetProjectInfo" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetProjectInfo" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetAllProjectInfo" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetProjectKeys" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetProjectNames" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ProjectTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetProjectInfo" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RetrieveTest.testGetComment" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RetrieveTest.testGetProjectKeys" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.RetrieveTest.testGetIssueIDs" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RetrieveTest.testGetAllInfo" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ProjectTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetProjectNames" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetAllProjectInfo" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetProjectKeys" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ProjectTest.testGetProjectInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -936,7 +918,7 @@
       <workItem from="1431477022336" duration="19015000" />
       <workItem from="1431560762236" duration="1202000" />
       <workItem from="1431564340418" duration="470000" />
-      <workItem from="1431564944819" duration="50716000" />
+      <workItem from="1431564944819" duration="53418000" />
     </task>
     <task id="LOCAL-00001" summary="소스 리팩토링">
       <created>1431429194262</created>
@@ -968,11 +950,17 @@
       <option name="project" value="LOCAL" />
       <updated>1431587942602</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Project 클래스 추가">
+      <created>1431935978888</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1431935978888</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74289000" />
+    <option name="totallyTimeSpent" value="76991000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1074,8 +1062,7 @@
           <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2153#2161#0" expanded="true" />
-            <element signature="e#2731#2739#0" expanded="true" />
+            <element signature="e#2122#2130#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1158,8 +1145,7 @@
           <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2153#2161#0" expanded="true" />
-            <element signature="e#2731#2739#0" expanded="true" />
+            <element signature="e#2122#2130#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1242,8 +1228,7 @@
           <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2153#2161#0" expanded="true" />
-            <element signature="e#2731#2739#0" expanded="true" />
+            <element signature="e#2122#2130#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1316,14 +1301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/DeleteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -1452,16 +1429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/Exception/ValidateCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1470,22 +1437,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Retrieve.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2153#2161#0" expanded="true" />
-            <element signature="e#2731#2739#0" expanded="true" />
+            <element signature="e#2122#2130#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-13.4838705">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1493,7 +1469,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1502,8 +1478,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/Project.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5339806">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.50161815">
+          <caret line="90" column="43" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+          <folding>
+            <element signature="e#1637#1645#0" expanded="true" />
+            <element signature="e#2214#2222#0" expanded="true" />
+            <element signature="e#2845#2853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/DeleteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6440129">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>

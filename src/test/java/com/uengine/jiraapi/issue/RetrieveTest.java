@@ -48,15 +48,4 @@ public class RetrieveTest {
         System.out.println(((Map)list.get(1)).toString());
     }
 
-    /*
-    * 2. 이슈 정보 : 프로젝트 키 목록을 가져옴.
-    * */
-    @Test
-    public void testGetProjectKeys() throws Exception {
-        rs.setProjectUrl("guruforrest.atlassian.net");
-        Retrieve retrieve = new Retrieve(rs.getAuth(), rs.getUrl());
-        ArrayList<String> list = retrieve.getProjectKeys();
-        System.out.println(list.size());
-
-    }
 }

@@ -6,7 +6,6 @@ import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.uengine.jiraapi.Exception.ValidateCheck;
 import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 import net.sf.json.JSONSerializer;
 
 import javax.naming.AuthenticationException;
@@ -68,24 +67,5 @@ public class Retrieve {
         }
         return list;
     }
-
-    /**
-     * 프로젝트 key 목록을 가져온다.
-     *
-     * @return project keys list
-     * @throws AuthenticationException
-     */
-    public ArrayList<String> getProjectKeys() throws AuthenticationException {
-        validateCheck.getStatusException(response.getStatus());
-        JSONArray jsonArray = (JSONArray) JSONSerializer.toJSON(response.getEntity(String.class));
-        ArrayList<String> arrayList = new ArrayList<String>();
-
-        Iterator it = jsonArray.iterator();
-        while (it.hasNext()) {
-            arrayList.add((String) JSONObject.fromObject(it.next()).get("key"));
-        }
-        return arrayList;
-    }
-
 
 }
