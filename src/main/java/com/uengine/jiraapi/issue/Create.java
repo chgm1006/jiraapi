@@ -16,6 +16,7 @@ public class Create {
 
     /**
      * 이슈를 생성한다.
+     *
      * @param auth  JIRA 인증정보.ex) admin:1234
      * @param url   REST URL
      * @param data  JSON 형태의 데이터

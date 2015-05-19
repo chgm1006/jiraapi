@@ -15,7 +15,6 @@ import java.util.Iterator;
 
 /**
  * All about Project information
- *
  */
 public class Project {
     private ValidateCheck validateCheck = new ValidateCheck();

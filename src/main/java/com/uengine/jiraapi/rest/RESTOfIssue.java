@@ -9,6 +9,7 @@ import com.uengine.jiraapi.Exception.ValidateCheck;
 public class RESTOfIssue {
     private static final String REST_ISSUE_URL = "/rest/api/2/issue";
     private static final String REST_PROJECT_URL = "/rest/api/2/project";
+    private static final String REST_PICKER_URL = "/rest/api/2/issue/picker";
     private ValidateCheck validateCheck = new ValidateCheck();
     private String auth = null;
     private String url = null;
@@ -67,10 +68,17 @@ public class RESTOfIssue {
 
     public void setProjectUrl(String url) {
         if (!validateCheck.checkNullURL(url)) {
-            throw new NullPointerException(url);
+            throw new NullPointerException(validateCheck.getNullMessage(url));
         }
 
         this.url = "https://" + url + REST_PROJECT_URL;
+    }
+
+    public void setIssueIDsUrl(String url, String key) {
+        if (!validateCheck.checkNullURL(url)) {
+            throw new NullPointerException(validateCheck.getNullMessage(url));
+        }
+        this.url = "https://" + url + REST_PICKER_URL + "?currentProjectId=" + key;
     }
 
     public String getData() {
