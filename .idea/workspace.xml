@@ -961,7 +961,7 @@
       <workItem from="1431564944819" duration="74682000" />
       <workItem from="1432018999106" duration="2193000" />
       <workItem from="1432028156955" duration="61000" />
-      <workItem from="1432028275182" duration="9430000" />
+      <workItem from="1432028275182" duration="9442000" />
     </task>
     <task id="LOCAL-00001" summary="소스 리팩토링">
       <created>1431429194262</created>
@@ -1017,11 +1017,17 @@
       <option name="project" value="LOCAL" />
       <updated>1432030991535</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Retrive 클래스에 getCommentIDs 메소드 추가">
+      <created>1432039940484</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1432039940484</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109939000" />
+    <option name="totallyTimeSpent" value="109951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
