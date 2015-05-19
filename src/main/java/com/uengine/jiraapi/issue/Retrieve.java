@@ -8,7 +8,7 @@ import net.sf.json.JSONSerializer;
 
 import javax.naming.AuthenticationException;
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -41,19 +41,27 @@ public class Retrieve {
      * 이슈 정보를 가져온다.
      *
      * @return 이슈정보를 JSON 형태로 반환한다.
-     * @throws AuthenticationException
      * @throws ClientHandlerException
      */
-    public Map<String, Object> getIssueInfo() throws AuthenticationException, ClientHandlerException {
-        validateCheck.getStatusException(response.getStatus());
-        return (Map) JSONSerializer.toJSON(response.getEntity(String.class));
+    public Map<String, Object> getIssueInfo() {
+        Map<String, Object> map = new HashMap<String, Object>();
+        try {
+            validateCheck.getStatusException(response.getStatus());
+            map = (Map<String, Object>) JSONSerializer.toJSON(response.getEntity(String.class));
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        } catch (ClientHandlerException e) {
+            e.printStackTrace();
+        } catch (UniformInterfaceException e) {
+            e.printStackTrace();
+        }
+        return map;
     }
 
     /**
      * 이슈 ID를 가져온다.
      *
      * @return get Issue ids list
-     * @throws AuthenticationException
      * @throws ClientHandlerException
      */
     public ArrayList<Object> getIssueIDs() {
@@ -65,9 +73,8 @@ public class Retrieve {
             JSONArray jsonArray = JSONArray.fromObject(map.get("sections"));
             JSONArray jsonArray1 = JSONArray.fromObject(((Map<String, Object>) jsonArray.get(0)).get("issues"));
 
-            Iterator it = jsonArray1.iterator();
-            while (it.hasNext()) {
-                list.add(((Map)it.next()).get("key"));
+            for (Object obj : jsonArray1) {
+                list.add(((Map) obj).get("key"));
             }
         } catch (ClientHandlerException e) {
             e.printStackTrace();
@@ -85,19 +92,30 @@ public class Retrieve {
      * 이슈의 코멘트 정보를 가져온다.
      *
      * @return 이슈정보를 JSON 형태로 반환한다.
-     * @throws AuthenticationException
-     * @throws ClientHandlerException
      */
-    public ArrayList<Object> getComments() throws AuthenticationException, ClientHandlerException {
-        validateCheck.getStatusException(response.getStatus());
-        Map<String, Object> map = (Map<String, Object>) JSONSerializer.toJSON(response.getEntity(String.class));
-        JSONArray jsonArray = JSONArray.fromObject(map.get("comments"));
-
+    public ArrayList<Object> getComments() {
+        Map<String, Object> map;
+        JSONArray jsonArray;
         ArrayList<Object> list = new ArrayList<Object>();
-        Iterator it = jsonArray.iterator();
-        while (it.hasNext()) {
-            list.add((Map) it.next());
+        try {
+            validateCheck.getStatusException(response.getStatus());
+            map = (Map<String, Object>) JSONSerializer.toJSON(response.getEntity(String.class));
+            jsonArray = JSONArray.fromObject(map.get("comments"));
+            for (Object obj : jsonArray) {
+                list.add(obj);
+            }
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        } catch (ClientHandlerException e) {
+            e.printStackTrace();
+        } catch (UniformInterfaceException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
         }
+
+
+
         return list;
     }
 
@@ -105,16 +123,17 @@ public class Retrieve {
      * 이슈의 코멘트 ID 리스트를 가져온다.
      *
      * @return 이슈정보를 JSON 형태로 반환한다.
-     * @throws AuthenticationException
-     * @throws ClientHandlerException
      */
-    public ArrayList<String > getCommentIDs() throws AuthenticationException, ClientHandlerException {
-        validateCheck.getStatusException(response.getStatus());
+    public ArrayList<String> getCommentIDs() {
+        try {
+            validateCheck.getStatusException(response.getStatus());
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        }
 
         ArrayList<String> list = new ArrayList<String>();
-        Iterator it = getComments().iterator();
-        while (it.hasNext()) {
-            Map<String, Object> map = (Map<String, Object>) it.next();
+        for (Object obj : getComments()) {
+            Map<String, Object> map = (Map<String, Object>) obj;
             list.add((String) map.get("id"));
         }
 
