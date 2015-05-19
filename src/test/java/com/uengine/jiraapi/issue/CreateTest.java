@@ -9,7 +9,7 @@ import javax.naming.AuthenticationException;
 public class CreateTest {
 
     /*
-    * 1. 이슈 생성 :: 프로젝트 이슈를 open
+    * 1. 이슈 생성 :: 프로젝트 이슈를 생성
     * */
     @Test
     public void testInvokePost() {

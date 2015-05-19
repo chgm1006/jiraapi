@@ -1,5 +1,7 @@
 package com.uengine.jiraapi.Exception;
 
+import org.apache.commons.lang.StringUtils;
+
 import javax.naming.AuthenticationException;
 
 /**
@@ -14,13 +16,13 @@ public class ValidateCheck {
      * @param data JSON 형태의 데이터
      */
     public void checkNullValue(String auth, String url, String data) {
-        if (!checkNullAuth(auth)) {
+        if (StringUtils.isEmpty(auth)) {
             throw new NullPointerException(getNullMessage("auth"));
         }
-        if (!checkNullURL(url)) {
+        if (StringUtils.isEmpty(url)) {
             throw new NullPointerException(getNullMessage("url"));
         }
-        if (!checkNullData(data)) {
+        if (StringUtils.isEmpty(data)) {
             throw new NullPointerException(getNullMessage("data"));
         }
     }
@@ -33,64 +35,12 @@ public class ValidateCheck {
      * @param url  JIRA 서버 URL
      */
     public void checkNullValue(String auth, String url) {
-        if (!checkNullAuth(auth)) {
+        if (StringUtils.isEmpty(auth)) {
             throw new NullPointerException(getNullMessage("auth"));
         }
-        if (!checkNullURL(url)) {
+        if (StringUtils.isEmpty(url)) {
             throw new NullPointerException(getNullMessage("url"));
         }
-    }
-
-    /**
-     * URL이 NULL인지 체크한다.
-     *
-     * @param url JIRA 서버 URL
-     * @return url값이 null이면 false를 반환
-     */
-    public boolean checkNullURL(String url) {
-        if (url == null || "".equals(url)) {
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * auth 값이 NULL인지 체크한다.
-     *
-     * @param auth 인증값. ex) admin:1234 (username:password)
-     * @return auth값이 null이면 false를 반환
-     */
-    public boolean checkNullAuth(String auth) {
-        if (auth == null || "".equals(auth)) {
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * key 값이 null인지 체크한다.
-     *
-     * @param key IssueID나 key. ex) JIRA-1
-     * @return key값이 null이면 false를 반환
-     */
-    public boolean checkNullKey(String key) {
-        if (key == null || "".equals(key)) {
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * data 값이 null인지 체크한다.
-     *
-     * @param data JSON 형태의 data 필드
-     * @return data 값이 null이면 false반환
-     */
-    public boolean checkNullData(String data) {
-        if (data == null || "".equals(data)) {
-            return false;
-        }
-        return true;
     }
 
     /**
