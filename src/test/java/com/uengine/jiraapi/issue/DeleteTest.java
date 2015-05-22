@@ -1,25 +1,33 @@
 package com.uengine.jiraapi.issue;
 
 import com.uengine.jiraapi.rest.RESTOfIssue;
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Created by Forrest G. Choi on 2015-05-14.
- */
+import java.util.Map;
+
 public class DeleteTest {
+    private RESTOfIssue rs;
+
+    @Before
+    public void setUp() {
+        rs = new RESTOfIssue();
+    }
 
     /*
     * 4. 이슈 삭제
     * */
     @Test
-    public void testInvodeDelete() throws Exception {
-        RESTOfIssue rs = new RESTOfIssue();
-        Delete delete = new Delete();
-
+    public void testInvokeDelete() {
         rs.setAuth("admin:promin1006");
-        rs.setIssueUrl("guruforrest.atlassian.net", "CREAT-8?deleteSubtasks=true");
+        rs.setIssueUrl("guruforrest.atlassian.net", "CREAT-5");
+        Delete delete = new Delete(rs.getUrl(), rs.getAuth());
 
-        System.out.println(rs.getUrl());
-        System.out.println(delete.invodeDelete(rs.getAuth(), rs.getUrl()));
+        Map<String, Object> map = delete.invokeDelete(rs.getAuth(), rs.getUrl());
+        System.out.println(map);
+
+        Assert.assertTrue(map != null);
+        Assert.assertEquals(map.get("errorCode"), 404);
     }
 }

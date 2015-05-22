@@ -34,7 +34,7 @@ public class Retrieve {
         response = webResource.header("Authorization", "Basic " + auth).type("application/json").accept("application/json").get(ClientResponse.class);
     }
 
-    public Retrieve() {
+    private Retrieve() {
     }
 
     /**
@@ -94,9 +94,10 @@ public class Retrieve {
      * @return 이슈정보를 JSON 형태로 반환한다.
      */
     public ArrayList<Object> getComments() {
-        Map<String, Object> map;
-        JSONArray jsonArray;
+        Map<String, Object> map = new HashMap<String, Object>();
+        JSONArray jsonArray = new JSONArray();
         ArrayList<Object> list = new ArrayList<Object>();
+
         try {
             validateCheck.getStatusException(response.getStatus());
             map = (Map<String, Object>) JSONSerializer.toJSON(response.getEntity(String.class));
@@ -113,9 +114,6 @@ public class Retrieve {
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
-
-
-
         return list;
     }
 

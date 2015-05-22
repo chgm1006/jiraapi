@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class RetrieveTest {
-    RESTOfIssue rs = new RESTOfIssue();
+    private RESTOfIssue rs = new RESTOfIssue();
 
     @Before
     public void setUp() throws Exception {

@@ -13,27 +13,43 @@ import javax.naming.AuthenticationException;
  */
 public class Create {
     private ValidateCheck validateCheck = new ValidateCheck();
+    private Client client = null;
+    private WebResource webResource = null;
+    private ClientResponse response = null;
+
+    /**
+     * auth와 url을 설정한다.
+     * 이 클래스의 메소드들을 사용하기 위해서는 auth와 url을 먼저 설정 해줘야 한다.
+     *
+     * @param auth JIRA 인증정보.ex) admin:1234
+     * @param url  REST URL
+     * @param data json 형식의 생성할 이슈의 필드값.
+     */
+    public Create(String auth, String url, String data) {
+        validateCheck.checkNullValue(auth, url);
+        client = Client.create();
+        webResource = client.resource(url);
+        response = webResource.header("Authorization", "Basic " + auth).type("application/json").accept("application/json").post(ClientResponse.class, data);
+    }
+
+    private Create() {
+    }
 
     /**
      * 이슈를 생성한다.
      *
-     * @param auth  JIRA 인증정보.ex) admin:1234
-     * @param url   REST URL
-     * @param data  JSON 형태의 데이터
-     * @return
+     * @return 생성된 이슈를 json 형식으로 반환
      * @throws AuthenticationException
      * @throws ClientHandlerException
      */
-    public String invokePost(String auth, String url, String data) throws AuthenticationException, ClientHandlerException {
-        validateCheck.checkNullValue(auth, url, data);
-
-        Client client = Client.create();
-        WebResource webResource = client.resource(url);
-        ClientResponse response = webResource.header("Authorization", "Basic " + auth).type("application/json").accept("application/json").post(ClientResponse.class, data);
+    public String createIssue() throws AuthenticationException, ClientHandlerException {
         int statusCode = response.getStatus();
-        if (statusCode == 401) {
+        if (statusCode == 400) {
+            throw new RuntimeException(response.getEntity(String.class));
+        } else if (statusCode == 401) {
             throw new AuthenticationException("Username과 Password가 잘못되었습니다.");
         }
-        return "이슈가 생성되었습니다.";
+
+        return response.getEntity(String.class);
     }
 }

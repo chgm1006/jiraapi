@@ -1,41 +1,42 @@
 package com.uengine.jiraapi.issue;
 
 import com.sun.jersey.api.client.ClientHandlerException;
+import com.uengine.jiraapi.data.IssueData;
 import com.uengine.jiraapi.rest.RESTOfIssue;
+import org.junit.Before;
 import org.junit.Test;
 
 import javax.naming.AuthenticationException;
 
 public class CreateTest {
 
+    private RESTOfIssue rs;
+    private Create create;
+    private IssueData issueData;
+
+    @Before
+    public void setUp() throws Exception {
+        rs = new RESTOfIssue();
+        issueData = new IssueData();
+    }
+
     /*
-    * 1. 이슈 생성 :: 프로젝트 이슈를 생성
-    * */
+        * 1. 이슈 생성 :: 프로젝트 이슈를 생성
+        * */
     @Test
-    public void testInvokePost() {
-        RESTOfIssue rs = new RESTOfIssue();
-        Create create = new Create();
-
-        String data =
-                "{\"fields\"" +
-                        ":{\"project\"" +
-                        ":{\"key\":\"CREAT\"}," +
-                        "\"summary\":\"createProject3 \",\"issuetype\":{\"name\":\"Task\"}}}";
-
-
+    public void testCreateIssue() {
         rs.setAuth("admin:promin1006");
         rs.setIssueUrl("guruforrest.atlassian.net");
-        rs.setData(data);
-        System.out.println(rs.getUrl());
-        System.out.println(data);
+        rs.setData(issueData.getCreateIssueData("CREAT", "something's wrong 8888", "aaaa", ""));
+        create = new Create(rs.getAuth(), rs.getUrl(), rs.getData());
 
         try {
-            System.out.println(create.invokePost(rs.getAuth(), rs.getUrl(), rs.getData()));
-            System.out.println(rs.getData());
+            System.out.println(create.createIssue());
         } catch (AuthenticationException e) {
             e.printStackTrace();
         } catch (ClientHandlerException e) {
             e.printStackTrace();
         }
+
     }
 }
