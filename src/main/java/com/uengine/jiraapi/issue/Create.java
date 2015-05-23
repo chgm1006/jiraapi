@@ -43,13 +43,28 @@ public class Create {
      * @throws ClientHandlerException
      */
     public String createIssue() throws AuthenticationException, ClientHandlerException {
-        int statusCode = response.getStatus();
-        if (statusCode == 400) {
-            throw new RuntimeException(response.getEntity(String.class));
-        } else if (statusCode == 401) {
-            throw new AuthenticationException("Username과 Password가 잘못되었습니다.");
+        try {
+            validateCheck.getStatusException(response);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
         }
 
+        return response.getEntity(String.class);
+    }
+
+    /**
+     * 코멘트를 생성한다.
+     *
+     * @return 생성된 코멘트를 json 형식으로 반환
+     * @throws AuthenticationException
+     * @throws ClientHandlerException
+     */
+    public String createComment() throws AuthenticationException, ClientHandlerException {
+        try {
+            validateCheck.getStatusException(response);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        }
         return response.getEntity(String.class);
     }
 }

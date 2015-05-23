@@ -19,15 +19,14 @@ public class DeleteTest {
     * 4. 이슈 삭제
     * */
     @Test
-    public void testInvokeDelete() {
+    public void testdeleteIssue() {
         rs.setAuth("admin:promin1006");
         rs.setIssueUrl("guruforrest.atlassian.net", "CREAT-5");
         Delete delete = new Delete(rs.getUrl(), rs.getAuth());
 
-        Map<String, Object> map = delete.invokeDelete(rs.getAuth(), rs.getUrl());
+        Map<String, Object> map = delete.deleteIssue(rs.getAuth(), rs.getUrl());
         System.out.println(map);
 
-        Assert.assertTrue(map != null);
         Assert.assertEquals(map.get("errorCode"), 404);
     }
 }

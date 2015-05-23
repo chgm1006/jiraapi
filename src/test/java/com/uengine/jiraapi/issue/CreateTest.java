@@ -39,4 +39,14 @@ public class CreateTest {
         }
 
     }
+
+    @Test
+    public void testCreateComment() throws Exception {
+        rs.setAuth("admin:promin1006");
+        rs.setCommentUrl("guruforrest.atlassian.net", "CREAT-27");
+        rs.setData(issueData.getCreateCommentData("test 44444", "Developers"));
+
+        create = new Create(rs.getAuth(), rs.getUrl(), rs.getData());
+        System.out.println(create.createComment());
+    }
 }

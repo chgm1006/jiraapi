@@ -40,9 +40,61 @@ public class IssueData {
         }
 
         fields += "}}";
-        System.out.println(fields);
-        JSONObject jsonArray = JSONObject.fromObject(fields);
-        return jsonArray.toString();
+        JSONObject jsonObject = JSONObject.fromObject(fields);
+        return jsonObject.toString();
     }
 
+    /**
+     * 생성할 코멘트의 데이터를 JSON 형식으로 반환한다.
+     *
+     * @param body     필수. 코멘트 내용
+     * @param roleName 필수. Project Role Name.
+     *                 Default Role Name) Administrators, Developers, Tempo Project Managers, Users
+     *                 이외에 다른 role을 지정해주고 싶다면 JIRA 서버로 들어가서 Project Role을 생성해 주어야 한다.
+     * @return JSON 형식의 문자열을 반환
+     */
+    public String getCreateCommentData(String body, String roleName) {
+        String fields = "{" +
+                "body: \"" + body + "\"," +
+                "visibility: {" +
+                "type: \"role\"" +
+                ",value: \"" + roleName + "\"}" +
+                "}";
+        if (StringUtils.isEmpty(body)) {
+            throw new NullPointerException(validateCheck.getNullMessage("body"));
+        }
+        if (StringUtils.isEmpty(roleName)) {
+            throw new NullPointerException(validateCheck.getNullMessage("roleName"));
+        }
+        return JSONObject.fromObject(fields).toString();
+    }
+
+    public String getUpdateIssueData() {
+        String fields = "{" +
+                "\"update\": {" +
+                "\"summary\": [" +
+                "{" +
+                "\"set\": \"Bug in business logic\"" +
+                "}" +
+                "]," +
+                "\"timetracking\": [" +
+                "{" +
+                "\"edit\": {" +
+                "\"originalEstimate\": \"1w 1d\"," +
+                "\"remainingEstimate\": \"4d\"" +
+                "}" +
+                "}" +
+                "]," +
+                "\"labels\": [" +
+                "{" +
+                "\"add\": \"test\"" +
+                "}," +
+                "{" +
+                "\"remove\": \"test\"" +
+                "}" +
+                "]" +
+                "}}";
+
+        return fields;
+    }
 }

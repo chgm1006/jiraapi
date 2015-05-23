@@ -1,15 +1,28 @@
 {
-  "fields": {
-    "project": {
-      "key": "CREAT"
+  "historyMetadata": {
+    "type": "myplugin:type",
+    "description": "text description",
+    "descriptionKey": "plugin.changereason.i18.key",
+    "activityDescription": "text description",
+    "activityDescriptionKey": "plugin.activity.i18.key",
+    "actor": {
+      "id": "tony",
+      "displayName": "Tony",
+      "type": "mysystem-user",
+      "avatarUrl": "http://mysystem/avatar/tony.jpg",
+      "url": "http://mysystem/users/tony"
     },
-    "summary": "something's wrong 4444",
-    "issuetype": {
-      "name": "Task"
+    "generator": {
+      "id": "mysystem-1",
+      "type": "mysystem-application"
     },
-    "description": ""
+    "cause": {
+      "id": "myevent",
+      "type": "mysystem-event"
+    },
+    "extraData": {
+      "keyvalue": "extra data",
+      "goes": "here"
+    }
   }
 }
-
-{fields:{project:{key: "CREAT"}, summary: "something's wrong 66666", issuetype:{name: "Task"
-}}

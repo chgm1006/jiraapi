@@ -16,9 +16,9 @@ import java.util.Map;
  */
 public class Retrieve {
     private ValidateCheck validateCheck = new ValidateCheck();
-    private Client client = null;
-    private WebResource webResource = null;
-    private ClientResponse response = null;
+    private Client client;
+    private WebResource webResource;
+    private ClientResponse response;
 
     /**
      * auth와 url을 설정한다.
@@ -46,7 +46,7 @@ public class Retrieve {
     public Map<String, Object> getIssueInfo() {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
-            validateCheck.getStatusException(response.getStatus());
+            validateCheck.getStatusException(response);
             map = (Map<String, Object>) JSONSerializer.toJSON(response.getEntity(String.class));
         } catch (AuthenticationException e) {
             e.printStackTrace();
@@ -68,7 +68,7 @@ public class Retrieve {
         ArrayList<Object> list = new ArrayList<Object>();
 
         try {
-            validateCheck.getStatusException(response.getStatus());
+            validateCheck.getStatusException(response);
             Map<String, Object> map = (Map<String, Object>) JSONSerializer.toJSON(response.getEntity(String.class));
             JSONArray jsonArray = JSONArray.fromObject(map.get("sections"));
             JSONArray jsonArray1 = JSONArray.fromObject(((Map<String, Object>) jsonArray.get(0)).get("issues"));
@@ -99,7 +99,7 @@ public class Retrieve {
         ArrayList<Object> list = new ArrayList<Object>();
 
         try {
-            validateCheck.getStatusException(response.getStatus());
+            validateCheck.getStatusException(response);
             map = (Map<String, Object>) JSONSerializer.toJSON(response.getEntity(String.class));
             jsonArray = JSONArray.fromObject(map.get("comments"));
             for (Object obj : jsonArray) {
@@ -124,7 +124,7 @@ public class Retrieve {
      */
     public ArrayList<String> getCommentIDs() {
         try {
-            validateCheck.getStatusException(response.getStatus());
+            validateCheck.getStatusException(response);
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }

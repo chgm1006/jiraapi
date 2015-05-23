@@ -1,5 +1,6 @@
 package com.uengine.jiraapi.Exception;
 
+import com.sun.jersey.api.client.ClientResponse;
 import org.apache.commons.lang.StringUtils;
 
 import javax.naming.AuthenticationException;
@@ -57,10 +58,15 @@ public class ValidateCheck {
     /**
      * status 코드의 예외 메세지를 반환한다.
      *
-     * @param status status 코드
+     * @param response status 코드
      * @throws AuthenticationException
      */
-    public void getStatusException(int status) throws AuthenticationException {
+    public void getStatusException(ClientResponse response) throws AuthenticationException {
+        int status = response.getStatus();
+        if (status == 400) {
+//            throw new RuntimeException("필수 입력 필드가 NULL입니다.");
+            throw new RuntimeException(response.getEntity(String.class));
+        }
         if (status == 401) {
             throw new AuthenticationException("Username과 Password가 잘못되었습니다.");
         }

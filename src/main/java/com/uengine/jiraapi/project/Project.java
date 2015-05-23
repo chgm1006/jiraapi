@@ -46,7 +46,7 @@ public class Project {
      * @throws ClientHandlerException
      */
     public ArrayList<Object> getAllProjectInfo() throws AuthenticationException, ClientHandlerException {
-        validateCheck.getStatusException(response.getStatus());
+        validateCheck.getStatusException(response);
         JSONArray jsonArray = JSONArray.fromObject(response.getEntity(String.class));
 
         ArrayList<Object> list = new ArrayList<Object>();
@@ -65,7 +65,7 @@ public class Project {
      * @throws AuthenticationException
      */
     public ArrayList<String> getProjectKeys() throws AuthenticationException {
-        validateCheck.getStatusException(response.getStatus());
+        validateCheck.getStatusException(response);
         JSONArray jsonArray = (JSONArray) JSONSerializer.toJSON(response.getEntity(String.class));
         ArrayList<String> arrayList = new ArrayList<String>();
 
@@ -83,7 +83,7 @@ public class Project {
      * @throws AuthenticationException
      */
     public ArrayList<String> getProjectNames() throws AuthenticationException {
-        validateCheck.getStatusException(response.getStatus());
+        validateCheck.getStatusException(response);
         JSONArray jsonArray = (JSONArray) JSONSerializer.toJSON(response.getEntity(String.class));
         ArrayList<String> arrayList = new ArrayList<String>();
 
