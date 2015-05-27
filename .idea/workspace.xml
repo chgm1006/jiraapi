@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64ce6ee4-7b80-4a20-9034-9ba871a11ab7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jiraapi.iws" />
@@ -56,11 +56,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UpdateTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21442495">
+            <state vertical-scroll-proportion="3.7288136">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RESTOfIssue.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.1328671">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -70,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+              <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -122,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/data/IssueDataTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/Project.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Retrieve.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/Exception/ValidateCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Create.java" />
         <option value="$PROJECT_DIR$/test.json" />
@@ -134,6 +143,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java" />
       </list>
     </option>
   </component>
@@ -970,7 +980,7 @@
       <workItem from="1432018999106" duration="2193000" />
       <workItem from="1432028156955" duration="61000" />
       <workItem from="1432028275182" duration="57129000" />
-      <workItem from="1432598858291" duration="28222000" />
+      <workItem from="1432598858291" duration="28354000" />
     </task>
     <task id="LOCAL-00001" summary="소스 리팩토링">
       <created>1431429194262</created>
@@ -1080,11 +1090,17 @@
       <option name="project" value="LOCAL" />
       <updated>1432712636103</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="리팩토링">
+      <created>1432712668406</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1432712668406</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185860000" />
+    <option name="totallyTimeSpent" value="185992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1201,8 +1217,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#4363#4364#0" expanded="true" />
-            <element signature="e#4390#4391#0" expanded="true" />
+            <element signature="e#4739#4740#0" expanded="true" />
+            <element signature="e#4766#4767#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1281,8 +1297,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#4363#4364#0" expanded="true" />
-            <element signature="e#4390#4391#0" expanded="true" />
+            <element signature="e#4739#4740#0" expanded="true" />
+            <element signature="e#4766#4767#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1463,14 +1479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.10356">
-          <caret line="148" column="7" selection-start-line="148" selection-start-column="7" selection-end-line="148" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/project/Project.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -1571,18 +1579,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state vertical-scroll-proportion="3.7288136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21442495">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1328671">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding />
         </state>
       </provider>
