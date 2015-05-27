@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64ce6ee4-7b80-4a20-9034-9ba871a11ab7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Create.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Create.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/CreateTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/CreateTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Delete.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Delete.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/DeleteTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/DeleteTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/data/IssueData.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/data/IssueData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/rest/RESTOfIssue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Retrieve.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Retrieve.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Update.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/issue/Update.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/Exception/ValidateCheck.java" afterPath="$PROJECT_DIR$/src/main/java/com/uengine/jiraapi/Exception/ValidateCheck.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.json" afterPath="$PROJECT_DIR$/test.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jiraapi.iws" />
@@ -71,8 +58,8 @@
       <file leaf-file-name="IssueDataTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/data/IssueDataTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5769231">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.65384614">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1026,7 +1013,7 @@
       <workItem from="1432018999106" duration="2193000" />
       <workItem from="1432028156955" duration="61000" />
       <workItem from="1432028275182" duration="57129000" />
-      <workItem from="1432598858291" duration="27462000" />
+      <workItem from="1432598858291" duration="27523000" />
     </task>
     <task id="LOCAL-00001" summary="소스 리팩토링">
       <created>1431429194262</created>
@@ -1112,11 +1099,17 @@
       <option name="project" value="LOCAL" />
       <updated>1432366365763</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Delete Comment 메소드 추가&#10;Update Issue 메소드 추가&#10;리팩토링">
+      <created>1432711951762</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1432711951762</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185100000" />
+    <option name="totallyTimeSpent" value="185161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1127,14 +1120,14 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Kotlin Bytecode" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1202,7 +1195,8 @@
     <MESSAGE value="Retrive 클래스에 getCommentIDs 메소드 추가" />
     <MESSAGE value="Delete 클래스 수정" />
     <MESSAGE value="Update 이슈 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 이슈 추가" />
+    <MESSAGE value="Delete Comment 메소드 추가&#10;Update Issue 메소드 추가&#10;리팩토링" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Comment 메소드 추가&#10;Update Issue 메소드 추가&#10;리팩토링" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1610,8 +1604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/data/IssueDataTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5769231">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.65384614">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
