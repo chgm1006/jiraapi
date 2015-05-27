@@ -58,8 +58,8 @@
       <file leaf-file-name="IssueDataTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/data/IssueDataTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65384614">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6923077">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -1013,7 +1013,7 @@
       <workItem from="1432018999106" duration="2193000" />
       <workItem from="1432028156955" duration="61000" />
       <workItem from="1432028275182" duration="57129000" />
-      <workItem from="1432598858291" duration="27523000" />
+      <workItem from="1432598858291" duration="27533000" />
     </task>
     <task id="LOCAL-00001" summary="소스 리팩토링">
       <created>1431429194262</created>
@@ -1105,11 +1105,17 @@
       <option name="project" value="LOCAL" />
       <updated>1432711951762</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Delete Comment 메소드 추가&#10;Update Issue 메소드 추가&#10;리팩토링">
+      <created>1432711967840</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1432711967840</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185161000" />
+    <option name="totallyTimeSpent" value="185171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1604,8 +1610,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/data/IssueDataTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65384614">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6923077">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding />
         </state>
       </provider>
