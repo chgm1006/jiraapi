@@ -41,7 +41,7 @@ public class Update {
     /**
      * 이슈 혹은 코멘트 정보를 업데이트.
      *
-     * @return
+     * @return 결과를 Map으로 반환
      * @throws AuthenticationException
      * @throws ClientHandlerException
      */
