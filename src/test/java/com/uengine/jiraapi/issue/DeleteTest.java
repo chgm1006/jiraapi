@@ -1,7 +1,6 @@
 package com.uengine.jiraapi.issue;
 
 import com.uengine.jiraapi.rest.RESTOfIssue;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,12 +20,27 @@ public class DeleteTest {
     @Test
     public void testdeleteIssue() {
         rs.setAuth("admin:promin1006");
-        rs.setIssueUrl("guruforrest.atlassian.net", "CREAT-5");
-        Delete delete = new Delete(rs.getUrl(), rs.getAuth());
+        rs.setIssueUrl("guru-forrest.atlassian.net", "CREAT-1");
+        Delete delete = new Delete(rs.getAuth(), rs.getUrl());
 
-        Map<String, Object> map = delete.deleteIssue(rs.getAuth(), rs.getUrl());
+        Map<String, Object> map = delete.deleteIssueOrComment(rs.getAuth(), rs.getUrl());
         System.out.println(map);
 
-        Assert.assertEquals(map.get("errorCode"), 404);
+//        Assert.assertEquals(map.get("errorCode"), 404);
+    }
+
+    /*
+   * 4. 이슈 삭제
+   * */
+    @Test
+    public void testdeleteComment() {
+        rs.setAuth("admin:promin1006");
+        rs.setCommentUrl("guru-forrest.atlassian.net", "CREAT-2", "10010");
+        Delete delete = new Delete(rs.getAuth(), rs.getUrl());
+
+        Map<String, Object> map = delete.deleteIssueOrComment(rs.getAuth(), rs.getUrl());
+        System.out.println(map);
+
+//        Assert.assertEquals(map.get("errorCode"), 404);
     }
 }

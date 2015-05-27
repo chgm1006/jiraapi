@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 이슈 정보를 삭제
+ * 이슈 혹은 코멘트 정보를 삭제
  */
 public class Delete {
     private ValidateCheck validateCheck = new ValidateCheck();
@@ -20,7 +20,14 @@ public class Delete {
     private WebResource webResource;
     private ClientResponse response;
 
-    public Delete(String url, String auth) {
+    /**
+     * url과 auth 정보를 설정한다.
+     *
+     * @param auth JIRA 인증정보.ex) admin:1234
+     * @param url  REST URL
+     */
+    public Delete(String auth, String url) {
+        validateCheck.checkNullValue(auth, url);
         client = Client.create();
         webResource = client.resource(url);
         response = webResource.header("Authorization", "Basic " + auth).type("application/json").accept("application/json").delete(ClientResponse.class);
@@ -38,7 +45,7 @@ public class Delete {
      * @throws AuthenticationException
      * @throws ClientHandlerException
      */
-    public Map<String, Object> deleteIssue(String auth, String url)  {
+    public Map<String, Object> deleteIssueOrComment(String auth, String url) {
         validateCheck.checkNullValue(auth, url);
         Map<String, Object> map = new HashMap<String, Object>();
 

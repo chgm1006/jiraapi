@@ -91,19 +91,24 @@ public class RESTOfIssue {
     /**
      * JIRA 코멘트 관련 URL 주소를 설정한다.
      *
-     * @param url 접근하고자 하는 JIRA 서버 주소. 예) domain.atlassian.net
-     * @param key 접근하고자 하는 Issue의 ID or Key. 예) JIRA-1
+     * @param url       접근하고자 하는 JIRA 서버 주소. 예) domain.atlassian.net
+     * @param key       접근하고자 하는 Issue의 ID or Key. 예) JIRA-1
+     * @param commentID Comment ID. Comment를 업데이트 할 경우. Comment를 새로 생성할 경우 NULL입력.
      */
-    public void setCommentUrl(String url, String key) {
+    public void setCommentUrl(String url, String key, String commentID) {
+        String commentURL = null;
         if (StringUtils.isEmpty(url)) {
             throw new NullPointerException(validateCheck.getNullMessage("url"));
         }
         if (StringUtils.isEmpty(key)) {
             throw new NullPointerException(validateCheck.getNullMessage("key"));
         }
-
-        this.url = "https://" + url + REST_ISSUE_URL + "/" + key + "/comment";
-
+        if (StringUtils.isEmpty(commentID.trim())) {
+            commentURL = "https://" + url + REST_ISSUE_URL + "/" + key + "/comment";
+        } else {
+            commentURL = "https://" + url + REST_ISSUE_URL + "/" + key + "/comment" + "/" + commentID;
+        }
+        this.url = commentURL;
     }
 
     /**

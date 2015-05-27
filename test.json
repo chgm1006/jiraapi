@@ -1,28 +1,328 @@
 {
-  "historyMetadata": {
-    "type": "myplugin:type",
-    "description": "text description",
-    "descriptionKey": "plugin.changereason.i18.key",
-    "activityDescription": "text description",
-    "activityDescriptionKey": "plugin.activity.i18.key",
-    "actor": {
-      "id": "tony",
-      "displayName": "Tony",
-      "type": "mysystem-user",
-      "avatarUrl": "http://mysystem/avatar/tony.jpg",
-      "url": "http://mysystem/users/tony"
+  "expand": "renderedFields,names,schema,transitions,operations,editmeta,changelog,versionedRepresentations",
+  "id": "10000",
+  "self": "https://guru-forrest.atlassian.net/rest/api/2/issue/10000",
+  "key": "CREAT-1",
+  "fields": {
+    "issuetype": {
+      "self": "https://guru-forrest.atlassian.net/rest/api/2/issuetype/3",
+      "id": "3",
+      "description": "A task that needs to be done.",
+      "iconUrl": "https://guru-forrest.atlassian.net/images/icons/issuetypes/task.png",
+      "name": "Task",
+      "subtask": false
     },
-    "generator": {
-      "id": "mysystem-1",
-      "type": "mysystem-application"
+    "timespent": null,
+    "project": {
+      "self": "https://guru-forrest.atlassian.net/rest/api/2/project/10000",
+      "id": "10000",
+      "key": "CREAT",
+      "name": "Creat",
+      "avatarUrls": {
+        "48x48": "https://guru-forrest.atlassian.net/secure/projectavatar?avatarId=10011",
+        "24x24": "https://guru-forrest.atlassian.net/secure/projectavatar?size=small&avatarId=10011",
+        "16x16": "https://guru-forrest.atlassian.net/secure/projectavatar?size=xsmall&avatarId=10011",
+        "32x32": "https://guru-forrest.atlassian.net/secure/projectavatar?size=medium&avatarId=10011"
+      }
     },
-    "cause": {
-      "id": "myevent",
-      "type": "mysystem-event"
+    "fixVersions": [],
+    "aggregatetimespent": null,
+    "resolution": null,
+    "resolutiondate": null,
+    "workratio": 0,
+    "lastViewed": "2015-05-27T15:02:56.105+0900",
+    "watches": {
+      "self": "https://guru-forrest.atlassian.net/rest/api/2/issue/CREAT-1/watchers",
+      "watchCount": 1,
+      "isWatching": true
     },
-    "extraData": {
-      "keyvalue": "extra data",
-      "goes": "here"
+    "created": "2015-05-26T19:01:50.982+0900",
+    "customfield_10020": null,
+    "customfield_10021": null,
+    "customfield_10022": null,
+    "priority": {
+      "self": "https://guru-forrest.atlassian.net/rest/api/2/priority/3",
+      "iconUrl": "https://guru-forrest.atlassian.net/images/icons/priorities/medium.png",
+      "name": "Medium",
+      "id": "3"
+    },
+    "customfield_10023": "Not Started",
+    "customfield_10024": null,
+    "labels": [
+      "test2222",
+      "test3333"
+    ],
+    "customfield_10016": null,
+    "customfield_10017": null,
+    "customfield_10018": null,
+    "customfield_10019": null,
+    "timeestimate": 144000,
+    "aggregatetimeoriginalestimate": 489600,
+    "versions": [],
+    "issuelinks": [],
+    "assignee": null,
+    "updated": "2015-05-27T15:02:40.082+0900",
+    "status": {
+      "self": "https://guru-forrest.atlassian.net/rest/api/2/status/10000",
+      "description": "",
+      "iconUrl": "https://guru-forrest.atlassian.net/images/icons/statuses/open.png",
+      "name": "To Do",
+      "id": "10000",
+      "statusCategory": {
+        "self": "https://guru-forrest.atlassian.net/rest/api/2/statuscategory/2",
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+      }
+    },
+    "components": [],
+    "timeoriginalestimate": 489600,
+    "description": "test",
+    "customfield_10012": "0|hzzzzz:",
+    "customfield_10013": null,
+    "customfield_10014": null,
+    "timetracking": {
+      "originalEstimate": "3w 2d",
+      "remainingEstimate": "1w",
+      "originalEstimateSeconds": 489600,
+      "remainingEstimateSeconds": 144000
+    },
+    "customfield_10015": null,
+    "customfield_10007": null,
+    "attachment": [],
+    "customfield_10009": null,
+    "aggregatetimeestimate": 144000,
+    "summary": "Bug in business logic 2222",
+    "creator": {
+      "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+      "name": "admin",
+      "key": "admin",
+      "emailAddress": "chgm1006@gmail.com",
+      "avatarUrls": {
+        "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+        "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+        "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+        "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+      },
+      "displayName": "gyeongmin choi [Administrator]",
+      "active": true,
+      "timeZone": "Asia/Tokyo"
+    },
+    "subtasks": [],
+    "reporter": {
+      "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+      "name": "admin",
+      "key": "admin",
+      "emailAddress": "chgm1006@gmail.com",
+      "avatarUrls": {
+        "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+        "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+        "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+        "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+      },
+      "displayName": "gyeongmin choi [Administrator]",
+      "active": true,
+      "timeZone": "Asia/Tokyo"
+    },
+    "customfield_10000": null,
+    "aggregateprogress": {
+      "progress": 0,
+      "total": 144000,
+      "percent": 0
+    },
+    "customfield_10001": null,
+    "customfield_10002": null,
+    "customfield_10003": null,
+    "customfield_10004": null,
+    "environment": null,
+    "duedate": null,
+    "progress": {
+      "progress": 0,
+      "total": 144000,
+      "percent": 0
+    },
+    "comment": {
+      "startAt": 0,
+      "maxResults": 4,
+      "total": 4,
+      "comments": [
+        {
+          "self": "https://guru-forrest.atlassian.net/rest/api/2/issue/10000/comment/10000",
+          "id": "10000",
+          "author": {
+            "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "emailAddress": "chgm1006@gmail.com",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+            },
+            "displayName": "gyeongmin choi [Administrator]",
+            "active": true,
+            "timeZone": "Asia/Tokyo"
+          },
+          "body": "test 77777",
+          "updateAuthor": {
+            "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "emailAddress": "chgm1006@gmail.com",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+            },
+            "displayName": "gyeongmin choi [Administrator]",
+            "active": true,
+            "timeZone": "Asia/Tokyo"
+          },
+          "created": "2015-05-27T14:00:25.643+0900",
+          "updated": "2015-05-27T14:12:40.507+0900",
+          "visibility": {
+            "type": "role",
+            "value": "Developers"
+          }
+        },
+        {
+          "self": "https://guru-forrest.atlassian.net/rest/api/2/issue/10000/comment/10001",
+          "id": "10001",
+          "author": {
+            "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "emailAddress": "chgm1006@gmail.com",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+            },
+            "displayName": "gyeongmin choi [Administrator]",
+            "active": true,
+            "timeZone": "Asia/Tokyo"
+          },
+          "body": "test 66666",
+          "updateAuthor": {
+            "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "emailAddress": "chgm1006@gmail.com",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+            },
+            "displayName": "gyeongmin choi [Administrator]",
+            "active": true,
+            "timeZone": "Asia/Tokyo"
+          },
+          "created": "2015-05-27T14:07:56.334+0900",
+          "updated": "2015-05-27T14:07:56.334+0900",
+          "visibility": {
+            "type": "role",
+            "value": "Developers"
+          }
+        },
+        {
+          "self": "https://guru-forrest.atlassian.net/rest/api/2/issue/10000/comment/10002",
+          "id": "10002",
+          "author": {
+            "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "emailAddress": "chgm1006@gmail.com",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+            },
+            "displayName": "gyeongmin choi [Administrator]",
+            "active": true,
+            "timeZone": "Asia/Tokyo"
+          },
+          "body": "test 66666",
+          "updateAuthor": {
+            "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "emailAddress": "chgm1006@gmail.com",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+            },
+            "displayName": "gyeongmin choi [Administrator]",
+            "active": true,
+            "timeZone": "Asia/Tokyo"
+          },
+          "created": "2015-05-27T14:16:05.746+0900",
+          "updated": "2015-05-27T14:16:05.746+0900",
+          "visibility": {
+            "type": "role",
+            "value": "Developers"
+          }
+        },
+        {
+          "self": "https://guru-forrest.atlassian.net/rest/api/2/issue/10000/comment/10003",
+          "id": "10003",
+          "author": {
+            "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "emailAddress": "chgm1006@gmail.com",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+            },
+            "displayName": "gyeongmin choi [Administrator]",
+            "active": true,
+            "timeZone": "Asia/Tokyo"
+          },
+          "body": "test 88888",
+          "updateAuthor": {
+            "self": "https://guru-forrest.atlassian.net/rest/api/2/user?username=admin",
+            "name": "admin",
+            "key": "admin",
+            "emailAddress": "chgm1006@gmail.com",
+            "avatarUrls": {
+              "48x48": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=48",
+              "24x24": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=24",
+              "16x16": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=16",
+              "32x32": "https://secure.gravatar.com/avatar/2b175eb7d4672915d8615b04ccf970ed?d=mm&s=32"
+            },
+            "displayName": "gyeongmin choi [Administrator]",
+            "active": true,
+            "timeZone": "Asia/Tokyo"
+          },
+          "created": "2015-05-27T14:50:36.615+0900",
+          "updated": "2015-05-27T14:50:36.615+0900",
+          "visibility": {
+            "type": "role",
+            "value": "Developers"
+          }
+        }
+      ]
+    },
+    "votes": {
+      "self": "https://guru-forrest.atlassian.net/rest/api/2/issue/CREAT-1/votes",
+      "votes": 0,
+      "hasVoted": false
+    },
+    "worklog": {
+      "startAt": 0,
+      "maxResults": 20,
+      "total": 0,
+      "worklogs": []
     }
   }
 }

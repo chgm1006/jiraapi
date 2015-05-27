@@ -36,35 +36,22 @@ public class Create {
     }
 
     /**
-     * 이슈를 생성한다.
+     * 이슈 혹은 코멘트를 생성한다.
      *
      * @return 생성된 이슈를 json 형식으로 반환
-     * @throws AuthenticationException
      * @throws ClientHandlerException
      */
-    public String createIssue() throws AuthenticationException, ClientHandlerException {
+    public String createIssueOrComment() {
+        String result = null;
         try {
             validateCheck.getStatusException(response);
+            result = response.getEntity(String.class);
         } catch (AuthenticationException e) {
             e.printStackTrace();
-        }
-
-        return response.getEntity(String.class);
-    }
-
-    /**
-     * 코멘트를 생성한다.
-     *
-     * @return 생성된 코멘트를 json 형식으로 반환
-     * @throws AuthenticationException
-     * @throws ClientHandlerException
-     */
-    public String createComment() throws AuthenticationException, ClientHandlerException {
-        try {
-            validateCheck.getStatusException(response);
-        } catch (AuthenticationException e) {
+        } catch (RuntimeException e) {
             e.printStackTrace();
         }
-        return response.getEntity(String.class);
+        return result;
     }
+
 }

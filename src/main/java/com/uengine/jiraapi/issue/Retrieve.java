@@ -123,17 +123,17 @@ public class Retrieve {
      * @return 이슈정보를 JSON 형태로 반환한다.
      */
     public ArrayList<String> getCommentIDs() {
+        ArrayList<String> list = new ArrayList<String>();
         try {
             validateCheck.getStatusException(response);
+            for (Object obj : getComments()) {
+                Map<String, Object> map = (Map<String, Object>) obj;
+                list.add((String) map.get("id"));
+            }
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }
 
-        ArrayList<String> list = new ArrayList<String>();
-        for (Object obj : getComments()) {
-            Map<String, Object> map = (Map<String, Object>) obj;
-            list.add((String) map.get("id"));
-        }
 
         return list;
     }

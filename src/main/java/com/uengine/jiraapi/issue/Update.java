@@ -39,18 +39,33 @@ public class Update {
 
 
     /**
-     * 이슈정보를 업데이트.
+     * 이슈 혹은 코멘트 정보를 업데이트.
      *
      * @return
      * @throws AuthenticationException
      * @throws ClientHandlerException
      */
-    public String updateIssue() throws AuthenticationException, ClientHandlerException {
+    public Map<String, Object> updateIssueOrComment() throws AuthenticationException, ClientHandlerException {
         validateCheck.getStatusException(response);
-        System.out.println(response.getStatus());
+
         Map<String, Object> map = new HashMap<String, Object>();
-        if (response.getStatus() == 204) {
+        int status = response.getStatus();
+
+        if (status == 200 || status == 201 || status == 204) {
+            map.put("isUpdated", true);
+            map.put("errorCode", "");
+            map.put("errorMsg", "");
+        }else if (status == 401) {
+            map.put("isUpdated", false);
+            map.put("errorCode", status);
+            map.put("errorMsg", "Username과 Password가 잘못되었습니다.");
+        }else if (status == 502) {
+            map.put("isUpdated", false);
+            map.put("errorCode", status);
+            map.put("errorMsg", "URL 정보가 잘못되었습니다.");
         }
-        return "업데이트가 완료되었습니다.";
+
+        return map;
     }
+
 }

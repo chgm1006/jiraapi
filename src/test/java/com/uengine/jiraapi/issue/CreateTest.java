@@ -6,8 +6,6 @@ import com.uengine.jiraapi.rest.RESTOfIssue;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.naming.AuthenticationException;
-
 public class CreateTest {
 
     private RESTOfIssue rs;
@@ -21,32 +19,38 @@ public class CreateTest {
     }
 
     /*
-        * 1. 이슈 생성 :: 프로젝트 이슈를 생성
+        * 이슈를 생성
         * */
     @Test
     public void testCreateIssue() {
         rs.setAuth("admin:promin1006");
-        rs.setIssueUrl("guruforrest.atlassian.net");
+        rs.setIssueUrl("guru-forrest.atlassian.net");
         rs.setData(issueData.getCreateIssueData("CREAT", "something's wrong 8888", "aaaa", ""));
+
         create = new Create(rs.getAuth(), rs.getUrl(), rs.getData());
 
         try {
-            System.out.println(create.createIssue());
-        } catch (AuthenticationException e) {
-            e.printStackTrace();
+            System.out.println(create.createIssueOrComment());
         } catch (ClientHandlerException e) {
             e.printStackTrace();
         }
 
     }
 
+    /**
+     * 코멘트를 생성
+     */
     @Test
-    public void testCreateComment() throws Exception {
+    public void testCreateComment() {
         rs.setAuth("admin:promin1006");
-        rs.setCommentUrl("guruforrest.atlassian.net", "CREAT-27");
-        rs.setData(issueData.getCreateCommentData("test 44444", "Developers"));
+        rs.setCommentUrl("guru-forrest.atlassian.net", "CREAT-2", "");
+        rs.setData(issueData.getCommentData("test 88888", "Developers"));
 
         create = new Create(rs.getAuth(), rs.getUrl(), rs.getData());
-        System.out.println(create.createComment());
+        try {
+            System.out.println(create.createIssueOrComment());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

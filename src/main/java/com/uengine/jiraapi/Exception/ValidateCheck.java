@@ -16,7 +16,7 @@ public class ValidateCheck {
      * @param url  JIRA 서버 URL
      * @param data JSON 형태의 데이터
      */
-    public void checkNullValue(String auth, String url, String data) {
+    public void checkNullValue(String auth, String url, String data) throws NullPointerException {
         if (StringUtils.isEmpty(auth)) {
             throw new NullPointerException(getNullMessage("auth"));
         }
@@ -35,7 +35,7 @@ public class ValidateCheck {
      * @param auth 인증값. ex) admin:1234 (username:password)
      * @param url  JIRA 서버 URL
      */
-    public void checkNullValue(String auth, String url) {
+    public void checkNullValue(String auth, String url) throws NullPointerException {
         if (StringUtils.isEmpty(auth)) {
             throw new NullPointerException(getNullMessage("auth"));
         }
@@ -58,14 +58,13 @@ public class ValidateCheck {
     /**
      * status 코드의 예외 메세지를 반환한다.
      *
-     * @param response status 코드
+     * @param response 응답받은 response 객체
      * @throws AuthenticationException
      */
-    public void getStatusException(ClientResponse response) throws AuthenticationException {
+    public void getStatusException(ClientResponse response) throws AuthenticationException, RuntimeException {
         int status = response.getStatus();
         if (status == 400) {
-//            throw new RuntimeException("필수 입력 필드가 NULL입니다.");
-            throw new RuntimeException(response.getEntity(String.class));
+            throw new RuntimeException("필수 입력 필드가 NULL입니다.");
         }
         if (status == 401) {
             throw new AuthenticationException("Username과 Password가 잘못되었습니다.");
