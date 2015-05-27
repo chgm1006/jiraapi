@@ -5,9 +5,6 @@ import com.uengine.jiraapi.rest.RESTOfIssue;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Created by Forrest G. Choi on 2015-05-13.
- */
 public class UpdateTest {
     String data = "{\"fields\":{\"assignee\":{\"name\":\"vinodh\"}}}";
     private RESTOfIssue rs;
@@ -25,7 +22,7 @@ public class UpdateTest {
     * */
     @Test
     public void testUpdateIssue() throws Exception {
-        rs.setAuth("admin:promin1006");
+        rs.setAuth("admin:1234");
         rs.setIssueUrl("guru-forrest.atlassian.net", "CREAT-2");
 //        rs.setData(issueData.getUpdateIssueData("Bug in business logic 2222 3333", "3w 2d", "5d", "test3333", "test22222"));
         rs.setData(issueData.getUpdateIssueData("Bug in business logic 2222 3333", "3w 2d", "5d", "test3333", "test22222"));
@@ -37,7 +34,7 @@ public class UpdateTest {
 
     @Test
     public void testUpdateComment() throws Exception {
-        rs.setAuth("admin:promin1006");
+        rs.setAuth("admin:1234");
         rs.setCommentUrl("guru-forrest.atlassian.net", "CREAT-1", "10001");
         rs.setData(issueData.getCommentData("test 6666 2222 2222", "Developers"));
         System.out.println(rs.getData());

@@ -19,7 +19,7 @@ public class DeleteTest {
     * */
     @Test
     public void testdeleteIssue() {
-        rs.setAuth("admin:promin1006");
+        rs.setAuth("admin:1234");
         rs.setIssueUrl("guru-forrest.atlassian.net", "CREAT-1");
         Delete delete = new Delete(rs.getAuth(), rs.getUrl());
 
@@ -34,7 +34,7 @@ public class DeleteTest {
    * */
     @Test
     public void testdeleteComment() {
-        rs.setAuth("admin:promin1006");
+        rs.setAuth("admin:1234");
         rs.setCommentUrl("guru-forrest.atlassian.net", "CREAT-2", "10010");
         Delete delete = new Delete(rs.getAuth(), rs.getUrl());
 

@@ -23,7 +23,7 @@ public class CreateTest {
         * */
     @Test
     public void testCreateIssue() {
-        rs.setAuth("admin:promin1006");
+        rs.setAuth("admin:1234");
         rs.setIssueUrl("guru-forrest.atlassian.net");
         rs.setData(issueData.getCreateIssueData("CREAT", "something's wrong 8888", "aaaa", ""));
 
@@ -42,7 +42,7 @@ public class CreateTest {
      */
     @Test
     public void testCreateComment() {
-        rs.setAuth("admin:promin1006");
+        rs.setAuth("admin:1234");
         rs.setCommentUrl("guru-forrest.atlassian.net", "CREAT-2", "");
         rs.setData(issueData.getCommentData("test 88888", "Developers"));
 

@@ -11,7 +11,7 @@ public class ProjectTest {
 
     @Before
     public void setUp() throws Exception {
-        rs.setAuth("admin:promin1006");
+        rs.setAuth("admin:1234");
     }
 
     /**
