@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64ce6ee4-7b80-4a20-9034-9ba871a11ab7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/CreateTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/CreateTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/DeleteTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/DeleteTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/project/ProjectTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/RetrieveTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -63,8 +59,8 @@
       <file leaf-file-name="UpdateTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17153996">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.21442495">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -974,7 +970,7 @@
       <workItem from="1432018999106" duration="2193000" />
       <workItem from="1432028156955" duration="61000" />
       <workItem from="1432028275182" duration="57129000" />
-      <workItem from="1432598858291" duration="28177000" />
+      <workItem from="1432598858291" duration="28222000" />
     </task>
     <task id="LOCAL-00001" summary="소스 리팩토링">
       <created>1431429194262</created>
@@ -1078,11 +1074,17 @@
       <option name="project" value="LOCAL" />
       <updated>1432711980331</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="리팩토링">
+      <created>1432712636103</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1432712636103</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185815000" />
+    <option name="totallyTimeSpent" value="185860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1169,7 +1171,8 @@
     <MESSAGE value="Delete 클래스 수정" />
     <MESSAGE value="Update 이슈 추가" />
     <MESSAGE value="Delete Comment 메소드 추가&#10;Update Issue 메소드 추가&#10;리팩토링" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="리팩토링" />
+    <option name="LAST_COMMIT_MESSAGE" value="리팩토링" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1578,8 +1581,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/uengine/jiraapi/issue/UpdateTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17153996">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.21442495">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>

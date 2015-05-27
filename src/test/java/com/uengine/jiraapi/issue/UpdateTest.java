@@ -6,7 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class UpdateTest {
-    String data = "{\"fields\":{\"assignee\":{\"name\":\"vinodh\"}}}";
     private RESTOfIssue rs;
     private Update update;
     private IssueData issueData;
